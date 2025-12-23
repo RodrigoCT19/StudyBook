@@ -105,6 +105,4 @@ npx cap open android
 
 ## 📌 Autor
 
-Proyecto académico desarrollado por **Rodrigo** (UCV).
-
-Si quieres, puedes abrir un issue con sugerencias o mejoras. 🙂
+Proyecto académico desarrollado para la Universidad César Vallejo.
