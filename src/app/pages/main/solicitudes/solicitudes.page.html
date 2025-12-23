@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-white-background">
+    <img src="assets/images/logo.png" alt="Descripción de la imagen" class="logo-imagen">
+    <ion-title class="titulo-centrado"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="fondo-con-lineas" id="fondoConLineas">
+  <ion-content [fullscreen]="true">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title size="large">Solicitud</ion-title>
+      </ion-toolbar> 
+    </ion-header>
+
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Detalles de la Solicitud</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p><strong>Sala:</strong> {{ sala }}</p>
+          <p><strong>Horario:</strong> {{ horario }}</p>
+          <p><strong>Fecha:</strong> {{ date | date: 'fullDate' }}</p>
+          <p><strong>Acompañantes:</strong></p>
+          <ul>
+            <li *ngFor="let student of students">{{ student }}</li>
+          </ul>
+          <div>
+            <h2>Codigo del Estudiante:</h2>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <p><strong>Código:</strong> {{ user.code }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-button expand="full" (click)="finalizar()">FINALIZAR</ion-button>
+    </ion-content>
+  </ion-content>
+</div>

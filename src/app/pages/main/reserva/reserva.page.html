@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-white-background">
+    <ion-title class="titulo-centrado"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="fondo-con-lineas" id="fondoConLineas">
+  <ion-content [fullscreen]="true">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title size="large">Mis Reservas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-card *ngIf="latestReservationSb" class="reservation-card">
+      <ion-card-header>
+        <ion-card-title>Detalles de la Reserva</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li><strong>Sala:</strong> {{ latestReservationSb.sala }}</li>
+          <li><strong>Fecha:</strong> {{ latestReservationSb.date }}</li>
+          <li><strong>Horario:</strong> {{ latestReservationSb.horario }}</li>
+          <li><strong>Acompañantes:</strong>
+            <ul class="students-list">
+              <li *ngFor="let student of latestReservationSb.students">{{ student }}</li>
+            </ul>
+          </li>
+          <li><strong>Código:</strong> {{ latestReservationSb.code }}</li>
+          <li><strong>Estado:</strong> {{ latestReservationSb.disabled ? 'Reservado' : 'Cancelado' }}</li>
+          
+          <ng-container *ngIf="latestReservationSb.disabled; else reserveMessage">
+            <p class="reservation-comment">Asistir 10 minutos antes para verificar tu reserva</p>
+          </ng-container>
+          <ng-template #reserveMessage>
+            <p class="reservation-comment">Tu reserva se canceló por acudir tarde</p>
+          </ng-template>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</div>

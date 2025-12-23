@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-white-background">
+    <img src="assets/images/logo.png" alt="Descripción de la imagen" class="logo-imagen">
+    <ion-title class="titulo-centrado"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="fondo-con-lineas" id="fondoConLineas">
+  <ion-content [fullscreen]="true">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title size="large">Mi Perfil</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <div class="profile-container">
+      <div class="user-icon">
+      </div>
+    
+      <div *ngIf="user" class="user-details">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Datos Personales</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p><strong>Correo Institucional:</strong></p>
+            <p>{{ user.email }}</p>
+            <p><strong>Carrera:</strong></p>
+            <p>{{ user.career }}</p>
+            <p><strong>N° Ciclo:</strong></p>
+            <p>{{ user.cicle }}</p>
+            <p><strong>Código:</strong></p>
+            <p>{{ user.code }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-content>
+</div>

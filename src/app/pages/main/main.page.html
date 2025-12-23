@@ -1,0 +1,32 @@
+<ion-menu contentId="menu-content" menuId="menu-content" side="start" type="overlay">
+  <ion-content>
+    <div class="profile-container">
+      <div class="user-icon" (click)="navigateToProfile()">
+      </div>
+      <div *ngIf="user" class="user-details">
+        <ion-card>
+          <ion-card-content>
+            <p><strong>Correo Institucional</strong> {{ user.email }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <div class="bordered-container">
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+        <ion-item [ngClass]="{'active': currentPath === p.url}" [routerLink]="p.url" routerDirection="root" detail>
+          <ion-icon slot="start" ></ion-icon>
+          <ion-label>{{p.title}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </div>
+  </ion-content>
+  <ion-footer class="ion-no-border safe-p-bottom">
+    <ion-menu-toggle auto-hide="false">
+      <ion-item (click)="signOut()" lines="none">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  </ion-footer>
+</ion-menu>
+<ion-router-outlet id="menu-content" main></ion-router-outlet>

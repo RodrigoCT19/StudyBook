@@ -1,0 +1,161 @@
+$background-color: white;
+$text-color: #333;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+ion-item {
+  font-size: 14px;
+
+  &.active {
+    color: var(--ion-color-warning);
+    
+    ion-icon {
+      color: var(--ion-color-warning);
+    }
+  }
+
+  transition: color 0.3s, transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+ion-menu {
+  --width: 254px;
+  --min-width: 254px;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #9b1111;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+
+  border-left: 9px solid white;
+  border-right: 12px solid white; 
+  border-bottom-left-radius: 25px; 
+  border-bottom-right-radius: 25px; 
+
+  &:hover {
+    background-color: darken(#9b1111, 5%);
+  }
+}
+
+.user-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  ion-icon {
+    font-size: 100px;
+    color: #333;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.user-details {
+  ion-card {
+    width: 93%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: slideInUp 0.5s ease-in-out;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+    }
+  }
+
+
+  ion-card-content {
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #333333;
+    }
+  }
+
+  strong {
+    color: #000;
+  }
+}
+
+ion-menu-toggle {
+  ion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &.active {
+      color: rgb(190, 190, 30);
+      
+      ion-icon {
+        color: rgb(190, 190, 30);
+      }
+
+      ion-label {
+        color: rgb(190, 190, 30);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    ion-icon {
+      margin-right: 10px;
+      font-size: 24px;
+      color: #9b1111;
+      transition: color 0.3s;
+    }
+
+    ion-label {
+      font-size: 15px;
+      color: #333;
+      transition: color 0.3s;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

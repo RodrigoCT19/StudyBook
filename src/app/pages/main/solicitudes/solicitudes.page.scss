@@ -1,0 +1,142 @@
+
+ion-header {
+    --background: #ff4757;
+    --color: #ffffff; 
+    
+    ion-toolbar {
+      --padding-start: 16px;
+      --padding-end: 16px;
+      --padding-top: 10px;
+      --padding-bottom: 10px;
+      
+      ion-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  ion-content {
+    --background: #f4f5f8; 
+    padding: 20px;
+  } 
+    ion-card {
+      --background: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 20px;
+  
+      ion-card-header {
+        background-color: #f9fafb;
+        border-bottom: 1px solid #e0e0e0;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding: 16px;
+        
+        ion-card-title {
+          font-size: 1.2rem;
+          color: #000000;
+        }
+      }
+      
+      ion-card-content {
+        padding: 16px;
+        
+        p {
+          font-size: 1rem;
+          color: #666;
+          margin-bottom: 10px;
+  
+          strong {
+            color: black;
+          }
+        }
+      }
+    }
+  
+    ion-button {
+      --background: #154b8a;
+      --background-activated: #154b8a;
+      --border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 12px;
+      margin-top: 20px;
+    }
+  
+  
+  
+  
+  /*
+  
+  ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    background-color: #f4f5f8;
+  }
+  
+  .lab-container {
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto 16px;
+    max-width: 80%;
+  }
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  ion-button {
+    width: 100%;
+    max-width: 120px;
+    margin: 5px;
+    
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  
+  */
+  
+  
+  /*----------------*/
+  
+  ion-title {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .logo-imagen {
+    width: 450px;
+    height: 150px;
+  }
+  
+  .fondo-con-lineas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+  }
+  
+  ion-title {
+    font-family: cursive, sans-serif;
+  }

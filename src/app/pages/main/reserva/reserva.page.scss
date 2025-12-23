@@ -1,0 +1,127 @@
+// Variables de color
+$primary-color: #2c3e50;
+$secondary-color: #000000;
+$text-color: #34495e;
+$background-color: #ecf0f1;
+$highlight-color: #e74c3c;
+$border-radius: 10px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$transition-time: 0.3s;
+
+// Estilos para el ion-card
+ion-card {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  transition: transform $transition-time, box-shadow $transition-time;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Estilos para el contenido del ion-card
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    display: inline;
+    font-size: 1.2em;
+    color: $primary-color;
+    margin: 0;
+    padding-right: 5px;
+  }
+
+  p {
+    display: inline;
+    font-size: 1em;
+    color: $text-color;
+    margin: 0;
+  }
+
+  strong {
+    font-weight: bold;
+    color: $secondary-color;
+  }
+
+  .reservation-comment {
+    color: $highlight-color;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+}
+
+.students-list {
+  padding-left: 1rem;
+  list-style-type: disc;
+
+  li {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    color: #495057;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+}
+
+ul {
+  li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp $transition-time ease-out forwards;
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+    &:nth-child(5) { animation-delay: 0.5s; }
+    &:nth-child(6) { animation-delay: 0.6s; }
+    &:nth-child(7) { animation-delay: 0.7s; }
+    &:nth-child(8) { animation-delay: 0.8s; }
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ion-title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo-imagen {
+  width: 450px;
+  height: 150px;
+}
+
+.fondo-con-lineas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+ion-title {
+  font-family: cursive, sans-serif;
+}

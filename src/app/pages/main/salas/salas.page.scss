@@ -1,0 +1,108 @@
+.categoria-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+ 
+  height: 6cm; 
+  margin: 10px; 
+  background-color: rgba(199, 114, 114, 0.678);
+  border: 5px solid rgb(204, 62, 57);
+  border-radius:8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-carde {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+ 
+  width: 45%;
+  height: 6cm; 
+  margin: 10px auto; 
+  background-color: rgba(199, 114, 114, 0.678);
+  border: 5px solid rgb(204, 62, 57);
+  border-radius:8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.categoria-carde img {
+  width: 95%;
+  height: 150px;
+}
+
+ion-title {
+  display: block; 
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding: 10px; 
+}
+
+@media only screen and (max-width: 520px) {
+  
+  .container {
+    justify-content: flex-start; 
+  }
+}
+
+.categoria-imagen {
+  width: 100%;
+  height: 100px; 
+  object-fit: cover; 
+
+}
+
+.categoria-imagene {
+  width: 65%;
+  height: 140px;
+  object-fit: cover; 
+
+}
+
+.logo-imagen {
+  width: 450px; 
+  height: 150px; 
+}
+
+.header-white-background {
+  background-color: #ffffff; 
+}
+
+
+ion-content {
+  --ion-background-color: transparent;
+}
+
+.fondo-con-lineas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1; 
+}
+
+
+
+.categoria-nombre {
+  color: rgb(255, 255, 255); 
+  font-family: cursive, sans-serif; 
+  font-size: 3.3vw;
+}
+ion-title {
+  font-family: cursive, sans-serif; 
+}

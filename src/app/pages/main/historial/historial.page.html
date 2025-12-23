@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-white-background">
+    <ion-title class="titulo-centrado"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="fondo-con-lineas" id="fondoConLineas">
+  <ion-content [fullscreen]="true">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title size="large">Mi Historial</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- Mostrar barra de progreso -->
+    <div class="progress-bar-container" style="text-align: center; margin: 20px 0;">
+      <div class="progress-bar-background">
+        <div class="progress-bar" [style.width.%]="remainingHeartssb * 33.33"></div>
+      </div>
+    </div>
+
+    <!-- Mostrar todas las reservas -->
+    <ion-card *ngFor="let reservationsb of activeReservationssb" class="reservation-card">
+      <ion-card-header>
+        <ion-card-title>Detalle del Historial</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li><strong>Sala:</strong> {{ reservationsb.sala }}</li>
+          <li><strong>Fecha:</strong> {{ reservationsb.date }}</li>
+          <li><strong>Horario:</strong> {{ reservationsb.horario }}</li>
+          <li><strong>Acompañantes:</strong></li>
+          <ul class="students-list">
+            <li *ngFor="let studentsb of reservationsb.students">{{ studentsb }}</li>
+          </ul>
+          <li><strong>Código:</strong> {{ reservationsb.code }}</li>
+          <li><strong>Estado:</strong> {{ reservationsb.status }}</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</div>
